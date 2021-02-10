@@ -1,0 +1,24 @@
+.header {
+    background-color: #222222;
+    height: 75px;
+    @include space-between;
+    @include vertical-center;
+
+    &_left_link {
+        margin-right: 41px;
+    }
+
+    &_right_link {
+        margin-left: 33px;
+    }
+
+    &_button{
+        background-color: inherit;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+

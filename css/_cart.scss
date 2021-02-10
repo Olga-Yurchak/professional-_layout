@@ -1,0 +1,163 @@
+.cart {
+    @include space-between;
+
+    &_product {
+        margin-top: 56px;
+        width: 652px;
+        @include space-between;
+        flex-wrap: wrap;
+
+        &_item {
+            height: 306px;
+            width: 652px;
+            background-image: url(../img/close.svg);
+            background-repeat: no-repeat;
+            background-position: 95% 10%;
+            box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
+            margin-top: 40px;
+
+            &_img {
+                float: left;
+                margin-right: 31px;
+            }
+
+            &_h2 {
+                @include font(400, 24px, #222);
+                padding: 22px 0 42px;
+            }
+
+            &_text {
+                @include font(400, 22px, #575757);
+                line-height: 1.5;
+
+                &_pink {
+                    color: #EF5B70;
+                }
+
+                &_last {
+                    float: left;
+                    margin-right: 25px;
+                }
+
+            }
+
+            &_input {
+                display: block;
+                width: 44px;
+                height: 25px;
+                border-color: #EAEAEA;
+                @include font(400, 18px, #656565);
+                padding-left: 16px;
+            }
+
+        }
+
+        &_reset,
+        &_button {
+            margin-top: 72px;
+            margin-bottom: 128px;
+            height: 50px;
+            @include font(300, 14px, #000000);
+            background-color: inherit;
+            border-color: #A4A4A4;
+            outline: none;
+        }
+
+        &_reset {
+            width: 235px;
+        }
+
+        &_button {
+            width: 225px;
+        }
+    }
+
+    &_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    &_data {
+        width: 360px;
+
+        &_text {
+            @include font(300, 16px, #222222);
+            margin-top: 113px;
+        }
+
+        &_input {
+            display: block;
+            width: 360px;
+            height: 45px;
+            margin: 20px 0;
+            border-color: #4A4A4A;
+            outline: none;
+            padding: 13px 17.24px 15px;
+
+            &[placeholder] {
+                @include font (300, 13px, #222222);
+            }
+
+            &_lighter[value] {
+                color: #B1B1B1;
+            }
+        }
+
+        &_button {
+            width: 102px;
+            height: 35px;
+            background-color: inherit;
+            border-color: #4A4A4A;
+            outline: none;
+            margin-top: 3px;
+            @include font(300, 11px, #4A4A4A);
+        }
+
+    }
+
+    &_checkout {
+        width: 360px;
+        height: 214px;
+        background-color: #F5F3F3;
+        margin-top: -245px;
+        text-align: right;
+
+        &_sub {
+            margin-top: 39px;
+            margin-right: 34px;
+            @include font(400, 11px, #4A4A4A);
+        }
+
+        &_total {
+            margin: 12px 34px 0 0;
+            @include font(300, 16px, #222);
+
+            &_pink {
+                color: $color;
+            }
+        }
+
+        &_hr {
+            width: 275px;
+            margin: 22px 42px 17px 43px;
+            color: #E2E2E2;
+        }
+
+        &_button {
+            width: 273px;
+            height: 50px;
+            background-color: $color;
+            color: white;
+            margin-right: 43px;
+            outline: none;
+            border: none;
+        }
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
