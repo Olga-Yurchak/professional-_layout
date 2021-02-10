@@ -1,0 +1,78 @@
+.categories {
+    @include space-between;
+    flex-wrap: wrap;
+
+    &_link {
+        text-decoration: none;
+        @include font(400, 16px, #FFFFFF)
+        text-align: center;
+    }
+
+    &_for_women, 
+    &_for_men {
+        width: 360px;
+        height: 260px;
+        margin-top: 65px;
+        padding-top: 105px;
+        background-color: #555;
+
+        &:hover {
+            transition: 0.8s;
+            transform: scale(1.07);
+        }
+    }
+
+    &_pink {
+        @include font(700, 24px, $color);
+    }
+
+    &_for_women {
+        background-image: url(../img/for_women.jpg);
+    }
+
+    &_for_men {
+        background-image: url(../img/for_men.jpg);
+    }
+
+    &_for_kids {
+        position: relative;
+        min-width: 360px;
+        min-height: 260px;
+        margin-top: 65px;
+        @include center;
+        flex-direction: column;
+        border-width: 30px 1px;
+        border-style:  solid;
+        border-color: #544A48;
+
+        &_black {
+            @include font(600, 16px, #544A48);
+            margin-top: 10px;
+        }
+
+        &_pink {
+            @include font(700, 24px, $color);
+            -webkit-text-stroke: 0.1px #544A48;
+        }
+    }
+
+    &_video {
+        width: 360px;
+        position: absolute;
+        z-index: -10;
+    }
+
+    &_accesories {
+        background-image: url(../img/accesories.jpg);
+        width: 1140px;
+        height: 180px;
+        margin-top: 30px;
+        padding-top: 65px;
+        background-color: #555;
+
+        &:hover {
+            transition: 0.8s;
+            transform: scale(1.07);
+        }
+    }
+}

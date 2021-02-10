@@ -1,0 +1,109 @@
+.navigation {
+    background-color: #F8F3F4;
+    @include space-between;
+
+    &_nav {
+        padding: 65px 0 66px;
+    }
+
+    &_heading {
+        padding: 59px 0 60px;
+        @include font(400, 24px, $color);
+        margin-left: 9px;
+    }
+
+    &_list {
+        list-style-type: none;
+        float: left;
+    }
+
+    &_link {
+        text-decoration: none;  
+        @include font;
+        padding-left: 5px;
+
+        &:hover {
+            @include font(700, 14px, $color);
+        }
+    }
+}
+
+.summary {
+
+    &_details {
+    float: left;
+    margin-right: 11px;
+    margin-top: 50px;
+    }
+
+    &_icon {
+        margin-top: 53px;
+        margin-left: -643px;
+
+        &:hover {
+            fill: #EF5B70;
+        }
+    }
+
+    &_filter:hover {
+        color: #EF5B70;
+        font-weight: 700;
+    }
+
+    &_vector {
+        float: left;
+        margin-top: 53px;
+    }
+
+    &_text {
+        display: block;
+        @include font;
+    }
+
+    &_trending {
+        margin-left: 320px;
+
+        &:hover {
+            color: #EF5B70;
+        }
+    }
+
+    &_size,
+    &_price {
+        margin-left: 38px;
+    }
+
+    &_clear {
+        clear: both;
+        margin-bottom: -60px;
+    }
+}
+
+::-webkit-details-marker {
+    display: none;
+}
+
+.paginator {
+    width: 284px;
+    height: 44px;
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+    text-align: center;
+    margin: 48px auto 96px;
+    padding: 12px 16px 13px;
+
+    &_link, 
+    &_ellipsis {
+        text-decoration: none;
+        @include font(300, 16px, #E5E5E5);
+        margin-right: 10px;
+    }
+
+    &_link:hover {
+        color: #EF5B70;
+    }
+
+    &_black {
+        color: black;
+    }
+}
