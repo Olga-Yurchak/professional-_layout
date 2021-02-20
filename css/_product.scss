@@ -1,0 +1,107 @@
+.slider {
+    background-color: #F7F7F7;
+    @include space-between;
+
+    &_img {
+        margin: 11px 0 42px;
+    }
+
+    &_angle {
+        width: 47px;
+        height: 47px;
+        background-color: #D8D8D8;
+        @include center;
+        margin: 365px 0 365px;
+
+        &_svg {
+            fill: black;
+
+            &:hover {
+                fill: $color;
+            }
+        }
+    }
+}
+
+.description {
+    border: 1px solid #EAEAEA;
+    background-color: white;
+    margin-top: -65px;
+    position: relative;
+    z-index: auto;
+    @include vertical-center;
+    flex-direction: column;
+    padding: 64.54px 249.5px 65px 250.5px;
+
+    &_h1 {
+        @include font(300, 14px, $color);
+    }
+
+    &_h2 {
+        @include font(300, 18px, #4D4D4D);
+    }
+
+    &_text{
+        margin: 48.41px 0 32.27px;
+        text-align: center;
+        @include font(300, 14px, #5E5E5E);
+    }
+
+    &_price {
+        @include font(300, 24px, #EF5B70);
+        margin-bottom: 65.04px;
+    }
+
+    &_trait{
+        width: 63px;
+        height: 3.03px;
+        background-color: #EF5B70;
+        margin: 12.1px 0 12.1px;
+    }
+}
+
+.selection {
+    width: 641px;
+    border-top: 1px solid #EAEAEA;
+    @include horizontal-center;
+
+    &_details {
+        margin-top: 65px;
+        margin-right: 9px;
+        @include font();
+    }
+
+    &_vector {
+        margin-top: 67px;
+        margin-right: 32px;
+    }
+
+    &_btn {
+        width: 211px;
+        height: 47.4px;
+        color: #F26376;
+        border: 1px solid #F26376;
+        margin-top: 48.91px;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            color: white;
+            background-color: #F26376;
+        }
+
+        &_svg {
+            fill: #F26376;
+        }
+
+        &:hover .selection_btn_svg {
+            fill: white;
+        }
+    }
+}
+
+.product_clear {
+    height: 128px;
+}

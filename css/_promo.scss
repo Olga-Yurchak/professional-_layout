@@ -1,0 +1,24 @@
+.promo {
+    background-color: #F1E4E6;
+    background-image: url(../img/promo.png);
+    background-repeat: no-repeat;
+    background-position: calc(50% - 1140px / 2 + 180px);
+    height: 764px;
+    @include vertical-center;
+
+    &_heading {
+        @include font(900, 48px, #222222);
+        padding-left: 12px;
+        margin-left: 662px;
+        line-height: 1;
+        border-left: 12px solid $color;
+    }
+
+    &_heading_small {
+        @include font(700, 32px, #222222);
+
+        &_pink {
+            color: $color;
+        }
+    }
+}
