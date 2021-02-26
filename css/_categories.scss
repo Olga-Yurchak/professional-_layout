@@ -1,0 +1,129 @@
+.categories {
+    @include space-between;
+    flex-wrap: wrap;
+
+    &_link {
+        text-decoration: none;
+        @include font(400, 16px, #FFFFFF)
+        text-align: center;
+    }
+
+    &_for_women, 
+    &_for_men {
+        width: 360px;
+        height: 260px;
+        margin-top: 65px;
+        padding-top: 105px;
+        background-color: #555;
+
+        &:hover {
+            transition: 0.8s;
+            transform: scale(1.07);
+        }
+    }
+
+    &_pink {
+        @include font(700, 24px, $color);
+    }
+
+    &_for_women {
+        background-image: url(../img/for_women.jpg);
+    }
+
+    &_for_men {
+        background-image: url(../img/for_men.jpg);
+    }
+
+    &_for_kids {
+        position: relative;
+        width: 360px;
+        height: 260px;
+        margin-top: 65px;
+        @include center;
+        flex-direction: column;
+        border-width: 30px 1px;
+        border-style:  solid;
+        border-color: #544A48;
+
+        &_black {
+            @include font(600, 16px, #544A48);
+            margin-top: 10px;
+        }
+
+        &_pink {
+            @include font(700, 24px, $color);
+            -webkit-text-stroke: 0.1px #544A48;
+        }
+    }
+
+    &_video {
+        width: 360px;
+        position: absolute;
+        z-index: -10;
+    }
+
+    &_accesories {
+        background-image: url(../img/accesories.jpg);
+        width: 100%;
+        height: 180px;
+        margin-top: 30px;
+        padding-top: 65px;
+        background-color: #555;
+
+        &:hover {
+            transition: 0.8s;
+            transform: scale(1.07);
+        }
+    }
+}
+
+@media (max-width: 1180px) {
+    .categories {
+
+        &_for_women,
+        &_for_men,
+        &_for_kids {
+            width: 232px;
+            height: 168px;
+            margin-top: 20px;
+        }
+
+        &_for_women,
+        &_for_men {
+            padding-top: 65px;
+        }
+
+        &_video {
+            width: 232px;
+        }
+
+        &_accesories {
+            height: 116px;
+            background-size: cover;
+            margin-top: 20px;
+            padding-top: 35px;
+        }
+    } 
+}
+
+@media (max-width: 798px) {
+    .categories {
+
+        &_for_women,
+        &_for_men,
+        &_for_kids,
+        &_video {
+            width: 343px;
+            height: 248px;
+        }
+
+        &_for_women,
+        &_for_men {
+            padding-top: 95px;
+        }
+
+        &_accesories {
+            height: 111px;
+        }
+    }
+}
