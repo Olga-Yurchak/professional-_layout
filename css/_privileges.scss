@@ -1,0 +1,70 @@
+.privileges {
+    background-color: #222224;
+    @include space-between;
+    height: 341px;
+
+    &_delivery,
+    &_discount,
+    &_quality {
+        width: 360px;
+        padding-bottom: 104px;
+        text-align: center;
+        color: #FBFBFB;
+        @include space-between;
+        flex-direction: column;
+        background-repeat: no-repeat;
+        background-position: center 100px;
+
+        &:hover {
+            transition: 0.8s;
+            transform: scale(1.2);
+        }
+    }
+
+    &_delivery {
+        background-image: url(../img/delivery.svg); 
+    }
+
+    &_discount {
+        background-image: url(../img/discount.svg);
+    }
+
+    &_quality {
+        background-image: url(../img/quality.svg);
+    }
+
+    &_heading {
+        @include font(400, 20px, white);
+        padding-top: 163px;
+    }
+
+    &_text {
+        @include font();
+        color: white;
+    }
+}
+
+@media (max-width: 1180px) {
+    .privileges{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 610px;
+
+        &_heading {
+            padding-top: 106px;
+        }
+
+        &_delivery,
+        &_discount,
+        &_quality {
+            width: 348px;
+            background-position: center 48px;
+            padding-bottom: 0;
+        }
+
+        &_text {
+            margin-top: 15px;
+        }
+    }
+}

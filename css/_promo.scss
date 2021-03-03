@@ -1,0 +1,58 @@
+.promo {
+    background-color: #F1E4E6;
+    background: url(../img/promo.png) calc(50% - 1140px / 2 + 180px) no-repeat;
+    min-height: 764px;
+    @include vertical-center;
+
+    &__heading {
+        @include font(900, 48px, #222222);
+        padding-left: 12px;
+        margin-left: 662px;
+        line-height: 1;
+        border-left: 12px solid $color;
+        text-transform: uppercase;
+
+        &_small {
+            @include font(700, 32px, #222222);
+        }
+    
+        &_pink {
+            color: $color;
+        }
+    }
+}
+
+@media (max-width: 1180px) {
+    .promo {
+        min-height: 368px;
+        background-size: contain;
+        background-position: calc(50% - (768px - 32px) / 2 + 180px);
+
+        &__heading {
+            font-size: 44px;
+            line-height: 0.75;
+            margin-left: 400px;
+
+            &_small {
+                font-size: 24px;
+            }
+        }
+    } 
+}
+
+@media (max-width: 767px) {
+    .promo {
+        background-image: none; 
+        min-height: 363px;
+        margin-bottom: 32px;
+
+        &__heading {
+            font-size: 38px;
+            margin-left: 45px;
+
+            &_small {
+                font-size: 20px;
+            }
+        }
+    }
+}
