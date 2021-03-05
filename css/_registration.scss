@@ -1,0 +1,120 @@
+.registration {
+    @include space-between;
+
+    &_left {
+        margin-top: 64px;
+
+        &_text {
+            @include font(300, 16px, #222222);
+
+            &_password {
+                @include font(300, 13px, #B1B1B1);
+                margin-top: 15px;
+            }
+        }
+
+        &_field {
+            display: block;
+            width: 360px;
+            height: 45px;
+            border: 1px solid #A4A4A4;
+            outline: none;
+            padding-left: 17.24px;
+            padding-right: 15px;
+            margin-top: 20px;
+
+        }
+
+        &_radio {
+            @include font(300, 11px, #000);
+
+            & input {
+                margin: 33px 10px 35px 20px;
+            }
+        }
+
+        &_button {
+            margin: 39px 0 96px;
+            width: 167px;
+            height: 50px;
+            background-color: $color;
+            color: #fff;
+            outline: none;
+
+            &:hover {
+                cursor: pointer;
+                transition: 0.8s;
+                transform: scale(1.1);
+            }
+
+            & svg {
+                fill: white;
+                margin-left: 20px;
+            }
+        }
+    }
+
+    &_right {
+        margin-top: 64px;
+
+        &_heading {
+            text-transform: uppercase;
+        }
+
+        &_heading, &_text, &_list {
+            @include font(300, 22px, #000000);
+        }
+
+        &_text {
+            margin-top: 22px;
+            line-height: 1.5;
+        }
+
+        &_list {
+            margin-top: 21px;
+            list-style: none;
+            line-height: 2;
+
+            &_conditions::before {
+                content: url(../img/check_mark.png);
+                padding-right: 22px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1180px) {
+    .registration_right {
+        margin-left: 22px;
+
+        &_heading, &_text, &_list {
+            font-size: 16px;
+        }
+    } 
+}
+
+@media (max-width: 767px) {
+    .registration {
+        flex-direction: column;
+
+        &_heading {
+            margin-top: 60px;
+        }
+    
+        &_left {
+        
+            &_field {
+                width: 340px;
+            }
+
+            &_button {
+                margin-bottom: 0;
+            }
+        }
+
+        &_right {
+            margin-left: 0;
+            margin-bottom: 96px;
+        }
+    }
+}
